@@ -1,8 +1,11 @@
 # Wildfire Spread Prediction — ML for Climate Change
 
 **Course:** ML for Climate Change, Imperial College London
+
 **Dataset:** [WildfireSpreadTS](https://github.com/SebastianGer/WildfireSpreadTS) (10% subset) · [Zenodo](https://doi.org/10.5281/zenodo.8006177)
+
 **Presentation:** [`docs/mlClimate_presentation.pdf`](docs/mlClimate_presentation.pdf)
+
 **Peer Assessment Form** (https://docs.google.com/spreadsheets/d/1m32XOlF3WH_khP9DvAulmOF2T6Qka2bCJ9-M0E9MpHM/edit?usp=sharing)
 
 ---
@@ -123,7 +126,7 @@ A systematic 12-experiment hyperparameter search (experiments A–L) explored at
 
 ---
 
-### 4. Static-Conditioned FNO-Transformer (Architecture A)
+### 4. Static-Conditioned FNO/ CNN-Transformer (Architecture A)
 **Location:** [`models/hh-experiments/`](models/hh-experiments/)
 
 A fully custom discriminative model that explicitly separates the 23 input channels into **static** (time-invariant: vegetation, topography, landcover) and **dynamic** (per-day: weather, fire history, VIIRS bands) groups. The dynamic encoder is conditioned on static features at every scale via **FiLM (Feature-wise Linear Modulation)**, replacing the standard unconditional encoder.
@@ -160,47 +163,6 @@ Three experiment variants are evaluated under 3-fold CV:
 | **E2** | Architecture A with CNN encoder weights transferred from pretrained VQ-VAE encoder |
 
 See [`models/hh-experiments/README.md`](models/hh-experiments/README.md) for full architecture and training details.
-
----
-
-## Results Summary
-
-All results use **Average Precision (AP)** as the primary metric (area under precision-recall curve), evaluated on the 10% subset of WildfireSpreadTS with 3-fold cross-validation.
-
-### Architecture Comparison — Ablation on Fold 0
-
-| Model | Test AP | Notes |
-|-------|--------:|-------|
-| Persistence baseline | ~0.19 | Prior day fire mask |
-| ResNet18-UNet (Gerard 2023) | 0.328 | Original benchmark |
-| **ResNet18-UNet (improved)** | **0.455** | +FireDiff, +Wind, +Boundary improvements |
-| ViT-UNet (MiT-B2) | 0.267 | MiT-B2 encoder, channels-stacked temporal |
-| ConvLSTM | 0.302 | Temporal recurrence |
-| UTAE | 0.340 | Temporal attention at bottleneck |
-| TF-UNet (bottleneck + dropout) | 0.352 | Best stable TF-UNet config |
-| TF-UNet (mono-temporal) | 0.466 | Unstable; highest single AP |
-
-### 3-Fold Cross-Validation Results
-
-**ViT-UNet / UTAE (Paolo)**
-
-| Model | Fold 0 | Fold 1 | Fold 2 | Mean ± Std |
-|-------|-------:|-------:|-------:|-----------|
-| UTAE | 0.3305 | 0.1365 | 0.3987 | 0.289 ± 0.136 |
-
-**Temporal Fusion U-Net (Naimeh)**
-
-| Config | Fold 0 | Fold 3 | Fold 10 | Mean ± Std |
-|--------|-------:|-------:|--------:|-----------|
-| All levels, Dice | 0.315 | 0.064 | 0.085 | 0.155 ± 0.114 |
-
-**ResNet18-UNet (Ahmed) — full benchmark across feature sets**
-
-| Model | T | Veg AP | Multi AP | All AP |
-|-------|---|-------:|---------:|-------:|
-| ResNet18-UNet (improved) | 1 | 0.455±0.090 | 0.468±0.087 | 0.460±0.084 |
-| ResNet18-UNet (improved) | 5 | 0.472±0.083 | 0.469±0.087 | 0.460±0.084 |
-| UTAE (Res18) | 5 | **0.478±0.085** | **0.477±0.089** | **0.475±0.091** |
 
 ---
 
