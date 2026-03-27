@@ -1,0 +1,21 @@
+*.csv
+*.xlsx
+*.txt
+*.log
+*.json
+*.claude/
+*.pdf
+*.docx
+
+.vscode/
+wildfire_architecture_design.md
+wildfire_experiments (4).ipynb
+wildfire_experiments_(3).ipynb
+wildfirespread_v3(1).ipynb
+output.png
+results_plot.png
+runs & ablation.jpeg
+
+backup/
+generate_notebook.py
+WildfireSpreadTS/

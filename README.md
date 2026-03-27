@@ -3,6 +3,7 @@
 **Course:** ML for Climate Change, Imperial College London
 **Dataset:** [WildfireSpreadTS](https://github.com/SebastianGer/WildfireSpreadTS) (10% subset) · [Zenodo](https://doi.org/10.5281/zenodo.8006177)
 **Presentation:** [`docs/mlClimate_presentation.pdf`](docs/mlClimate_presentation.pdf)
+**Peer Assessment Form** https://docs.google.com/spreadsheets/d/1m32XOlF3WH_khP9DvAulmOF2T6Qka2bCJ9-M0E9MpHM/edit?usp=sharing
 
 ---
 
