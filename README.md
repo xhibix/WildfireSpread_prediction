@@ -20,12 +20,12 @@ Six architectures were proposed and evaluated across four independent workstream
 
 ## Team & Contributions
 
-| Contributor | Branch | Model / Workstream |
+| Contributor | Folder | Model / Workstream |
 |-------------|--------|--------------------|
-| **Ahmed Zekry** | `WSTS-(ResNet18+UNet)` | ResNet18-UNet baseline & ablation study — reproduced and extended the WSTS+ paper (Lahrichi et al., 2026) |
-| **Paolo Salvetti** | `model/vit-unet` | ViT-UNet (MiT-B2 encoder + UNet decoder) architecture comparison; benchmarked against UTAE and ConvLSTM |
-| **Naimeh Vaezi** | `model/temporal-fusion-unet` | Temporal Fusion U-Net with multi-head attention; systematic hyperparameter search |
-| **xhibix** | `HH` | **Static-Conditioned FNO-Transformer** (FiLM conditioning + Fourier Neural Operator encoder + multi-scale temporal attention + probabilistic head) & **VQ-VAE + Latent Diffusion Model** (discrete latent space + DDPM/DDIM generative wildfire spread prediction) |
+| **Ahmed Zekry** | [`models/resnet-unet/`](models/resnet-unet/) | ResNet18-UNet baseline & ablation study — reproduced and extended the WSTS+ paper (Lahrichi et al., 2026) |
+| **Paolo Salvetti** | [`models/vit-unet/`](models/vit-unet/) | ViT-UNet (MiT-B2 encoder + UNet decoder) architecture comparison; benchmarked against UTAE and ConvLSTM |
+| **Naimeh Vaezi** | [`models/temporal-fusion-unet/`](models/temporal-fusion-unet/) | Temporal Fusion U-Net with multi-head attention; systematic hyperparameter search |
+| **xhibix** | [`models/hh-experiments/`](models/hh-experiments/) | **Static-Conditioned FNO-Transformer** (FiLM conditioning + Fourier Neural Operator encoder + multi-scale temporal attention + probabilistic head) & **VQ-VAE + Latent Diffusion Model** (discrete latent space + DDPM/DDIM generative wildfire spread prediction) |
 
 ---
 
