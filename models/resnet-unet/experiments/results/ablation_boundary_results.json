@@ -1,0 +1,62 @@
+[
+  {
+    "fold": 0,
+    "n_obs": 5,
+    "train_years": [
+      2018,
+      2019
+    ],
+    "val_years": [
+      2020
+    ],
+    "test_years": [
+      2021
+    ],
+    "ablation": "boundary_loss_only",
+    "boundary_weight": 5.0,
+    "dilation_radius": 5,
+    "best_val_AP": 0.0112,
+    "test_AP": 0.0102,
+    "test_F1": 0.0
+  },
+  {
+    "fold": 1,
+    "n_obs": 5,
+    "train_years": [
+      2018,
+      2020
+    ],
+    "val_years": [
+      2019
+    ],
+    "test_years": [
+      2021
+    ],
+    "ablation": "boundary_loss_only",
+    "boundary_weight": 5.0,
+    "dilation_radius": 5,
+    "best_val_AP": 0.0016,
+    "test_AP": 0.0092,
+    "test_F1": 0.0
+  },
+  {
+    "fold": 2,
+    "n_obs": 5,
+    "train_years": [
+      2019,
+      2020
+    ],
+    "val_years": [
+      2018
+    ],
+    "test_years": [
+      2021
+    ],
+    "ablation": "boundary_loss_only",
+    "boundary_weight": 5.0,
+    "dilation_radius": 5,
+    "best_val_AP": 0.0072,
+    "test_AP": 0.0073,
+    "test_F1": 0.0
+  }
+]

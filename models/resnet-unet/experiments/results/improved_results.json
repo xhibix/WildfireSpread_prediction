@@ -1,0 +1,74 @@
+[
+  {
+    "fold": 0,
+    "n_obs": 5,
+    "train_years": [
+      2018,
+      2019
+    ],
+    "val_years": [
+      2020
+    ],
+    "test_years": [
+      2021
+    ],
+    "improvements": [
+      "wind_uv",
+      "fire_diff",
+      "boundary_loss"
+    ],
+    "boundary_weight": 5.0,
+    "dilation_radius": 5,
+    "best_val_AP": 0.0087,
+    "test_AP": 0.0071,
+    "test_F1": 0.0
+  },
+  {
+    "fold": 1,
+    "n_obs": 5,
+    "train_years": [
+      2018,
+      2020
+    ],
+    "val_years": [
+      2019
+    ],
+    "test_years": [
+      2021
+    ],
+    "improvements": [
+      "wind_uv",
+      "fire_diff",
+      "boundary_loss"
+    ],
+    "boundary_weight": 5.0,
+    "dilation_radius": 5,
+    "best_val_AP": 0.0009,
+    "test_AP": 0.0069,
+    "test_F1": 0.0
+  },
+  {
+    "fold": 2,
+    "n_obs": 5,
+    "train_years": [
+      2019,
+      2020
+    ],
+    "val_years": [
+      2018
+    ],
+    "test_years": [
+      2021
+    ],
+    "improvements": [
+      "wind_uv",
+      "fire_diff",
+      "boundary_loss"
+    ],
+    "boundary_weight": 5.0,
+    "dilation_radius": 5,
+    "best_val_AP": 0.0063,
+    "test_AP": 0.0098,
+    "test_F1": 0.0
+  }
+]

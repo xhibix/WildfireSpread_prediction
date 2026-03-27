@@ -1,0 +1,56 @@
+[
+  {
+    "fold": 0,
+    "n_obs": 5,
+    "train_years": [
+      2018,
+      2019
+    ],
+    "val_years": [
+      2020
+    ],
+    "test_years": [
+      2021
+    ],
+    "ablation": "wind_uv_only",
+    "best_val_AP": 0.0116,
+    "test_AP": 0.0086,
+    "test_F1": 0.0
+  },
+  {
+    "fold": 1,
+    "n_obs": 5,
+    "train_years": [
+      2018,
+      2020
+    ],
+    "val_years": [
+      2019
+    ],
+    "test_years": [
+      2021
+    ],
+    "ablation": "wind_uv_only",
+    "best_val_AP": 0.0015,
+    "test_AP": 0.0113,
+    "test_F1": 0.0
+  },
+  {
+    "fold": 2,
+    "n_obs": 5,
+    "train_years": [
+      2019,
+      2020
+    ],
+    "val_years": [
+      2018
+    ],
+    "test_years": [
+      2021
+    ],
+    "ablation": "wind_uv_only",
+    "best_val_AP": 0.0065,
+    "test_AP": 0.008,
+    "test_F1": 0.0002
+  }
+]
